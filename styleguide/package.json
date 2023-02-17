@@ -2,6 +2,7 @@
   "name": "styleguide",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -9,15 +10,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=fcc8a3ed1afb"
   },
   "eslintConfig": {
     "extends": [
@@ -27,7 +27,7 @@
     "overrides": [
       {
         "files": [
-          "**/*.stories.*"
+          "**/stories.*"
         ],
         "rules": {
           "import/no-anonymous-default-export": "off"
@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.20.7",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-interactions": "^6.5.16",
@@ -59,7 +60,21 @@
     "@storybook/react": "^6.5.16",
     "@storybook/testing-library": "^0.0.13",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "chromatic": "^6.15.0",
+    "cross-env": "^7.0.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.75.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "styleguide@0.1.0",
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
   }
 }
