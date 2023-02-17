@@ -14,7 +14,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build": "cross-env BABEL_ENV=production babel src -d dist --copy-files",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic --project-token=fcc8a3ed1afb"
