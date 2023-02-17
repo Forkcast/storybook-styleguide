@@ -21,6 +21,7 @@ export const APrimary = Template.bind({})
 APrimary.args = {
   classes: [],
   results: [],
+  resultClasses: ['hide'],
   searchActions: {
     onChange: (e, setValue) => {
       setValue(e.target.value)

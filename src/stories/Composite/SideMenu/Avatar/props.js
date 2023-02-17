@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import imageAsset from './assets/avatar.svg';
+import imageAsset from 'assets/avatar.svg';
 
 const propTypes = {
   onClick: PropTypes.func,

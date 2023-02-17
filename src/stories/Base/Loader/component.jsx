@@ -12,7 +12,7 @@ const Component = ({ image, loading, className, classes, children }) => {
       className={'loader ' + classes.join(' ')}
     >
      {loading ?
-      <img src={image} />
+      <img src={image} alt="Loading..." />
       : children
     } 
     </ComponentStyle>

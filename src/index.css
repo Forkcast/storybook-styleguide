@@ -63,7 +63,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 .hide {
-	display: none !important;
+	display: none;
 }

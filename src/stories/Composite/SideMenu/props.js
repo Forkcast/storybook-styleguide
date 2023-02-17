@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import square from './assets/square.svg'
+import square from 'assets/square.svg'
 
 const propTypes = {
   onClick: PropTypes.func,
