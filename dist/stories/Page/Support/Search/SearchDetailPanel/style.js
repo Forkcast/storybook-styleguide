@@ -1,12 +1,1 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/taggedTemplateLiteral"));
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-var _templateObject;
-var _default = _styledComponents.default.div(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n    .two-column {\n        display: flex;\n        flex-direction: row;\n        flex-wrap: wrap;\n        > div {\n            flex-basis: 50%;\n        }\n    }\n"])));
-exports.default = _default;
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _taggedTemplateLiteral2=_interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));var _styledComponents=_interopRequireDefault(require("styled-components"));var _templateObject;var _default=_styledComponents.default.div(_templateObject||(_templateObject=(0,_taggedTemplateLiteral2.default)(["\n    .two-column {\n        width: 100%;\n        display: flex;\n        flex-direction: row;\n        flex-wrap: wrap;\n        justify-content: center;\n        gap: 17.5px;\n        .column {\n            display: flex;\n            flex-direction: column;\n            flex-basis: auto;\n            flex: 1;\n            width: 48%;\n        }\n   }\n"])));exports.default=_default;

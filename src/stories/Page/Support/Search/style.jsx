@@ -6,6 +6,14 @@ export default styled.div`
         cursor: pointer;
     }
     .panel {
-        margin: 24px;
+        margin-bottom: 24px;
+    }
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        gap: 23px;
+        div {
+            flex-grow:6;
+        }
     }
 `

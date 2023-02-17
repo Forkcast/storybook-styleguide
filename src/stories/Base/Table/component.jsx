@@ -5,7 +5,7 @@ import {
   defaultProps
 } from './props'
 
-const Component = ({ headers, rows, classes }) => {
+const Component = ({ headers, rows, empty, classes }) => {
   return (
     <ComponentStyle
       className={classes.join(' ')}
@@ -18,7 +18,7 @@ const Component = ({ headers, rows, classes }) => {
       </tr>
       </thead>
       <tbody>
-      {rows.map(row => 
+      {rows.length > 0 ? rows.map(row => 
         <tr key={row.key}>
           {row.columns.map(column => 
             <td 
@@ -30,7 +30,11 @@ const Component = ({ headers, rows, classes }) => {
             </td>  
           )}
         </tr>
-      )}
+      ): 
+        <tr>
+          <td colSpan={headers.length}>{empty}</td>
+        </tr>
+      }
       </tbody>
     </ComponentStyle>
   );

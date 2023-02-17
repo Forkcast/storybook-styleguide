@@ -1,12 +1,1 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/taggedTemplateLiteral"));
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-var _templateObject;
-var _default = _styledComponents.default.div(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n    .quick-access-buttons {\n        display: flex;\n    }\n"])));
-exports.default = _default;
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _taggedTemplateLiteral2=_interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));var _styledComponents=_interopRequireDefault(require("styled-components"));var _templateObject;var _default=_styledComponents.default.div(_templateObject||(_templateObject=(0,_taggedTemplateLiteral2.default)(["\n\n    .header-block {\n        h2 {\n            margin-bottom: 0px;\n        }\n        margin-bottom: 22px;\n    }\n    .quick-access-buttons {\n        display: flex;\n        flex-wrap: wrap;\n        button {\n            margin-top:6px;\n            margin-right: 8px;\n        }\n    }\n"])));exports.default=_default;

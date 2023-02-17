@@ -10,6 +10,7 @@ const h1 = styled.h1`
   display: flex;
   align-items: center;
   color: #000000;
+  margin-top: 0px;
 `
 
 const h2 = styled.h2`
@@ -22,6 +23,7 @@ const h2 = styled.h2`
   display: flex;
   align-items: center;
   color: #000000;
+  margin-top: 0px;
 `
 export {  
   h1,

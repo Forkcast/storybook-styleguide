@@ -1,12 +1,1 @@
-"use strict";
-
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault").default;
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/esm/taggedTemplateLiteral"));
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-var _templateObject;
-var _default = _styledComponents.default.div(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2.default)(["\n    .action {\n        color: #00A98F;\n        cursor: pointer;\n    }\n    .panel {\n        margin: 24px;\n    }\n"])));
-exports.default = _default;
+"use strict";var _interopRequireDefault=require("@babel/runtime/helpers/interopRequireDefault");Object.defineProperty(exports,"__esModule",{value:true});exports.default=void 0;var _taggedTemplateLiteral2=_interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));var _styledComponents=_interopRequireDefault(require("styled-components"));var _templateObject;var _default=_styledComponents.default.div(_templateObject||(_templateObject=(0,_taggedTemplateLiteral2.default)(["\n    .action {\n        color: #00A98F;\n        cursor: pointer;\n    }\n    .panel {\n        margin-bottom: 24px;\n    }\n    .search-container {\n        display: flex;\n        flex-direction: row;\n        gap: 23px;\n        div {\n            flex-grow:6;\n        }\n    }\n"])));exports.default=_default;

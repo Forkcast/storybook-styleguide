@@ -20,6 +20,12 @@ const Template = ({classes, ...args}) => <Component classes={classes} {...args} 
 export const APrimary = Template.bind({})
 APrimary.args = {
   classes: [],
-
+  loading: false,
+  userId: '123456',
+  firstName: 'John',
+  lastName: 'Smith',
+  eligibilities: ['Groceries', 'Housing Services'],
+  dataFetch: (userId, component) => false,
+  buttonClick: () => alert('Ive been clicked.'),
 }
-APrimary.storyName = '01.'
+APrimary.storyName = '01. Data Fetched'

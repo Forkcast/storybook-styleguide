@@ -6,7 +6,7 @@ import Panel from 'Base/Panel/component'
 import Paragraph from 'Base/Paragraph/component'
 import Button from 'Base/Button/component'
 
-import FeedbackDetail from 'FeedbackDetail/component'
+import FeedbackDetail from 'Page/Support/Search/SearchDetailPanel/Feedback/FeedbackDetail/component'
 import {
   propTypes,
   defaultProps
@@ -27,7 +27,7 @@ const Component = ({ classes, feedback, ...props }) => {
           <div className="feedback_list">
             <Paragraph classes={['active']}>Read more</Paragraph>
             {feedback.map((item, index) => {
-              if (index == 0)
+              if (index === 0)
                 return;
             
               return (<FeedbackDetail classes={['hidden']} key={`feedback_${index}`} {...item} />)

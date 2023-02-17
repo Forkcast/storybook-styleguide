@@ -20,6 +20,10 @@ const Template = ({classes, ...args}) => <Component classes={classes} {...args} 
 export const APrimary = Template.bind({})
 APrimary.args = {
   classes: [],
-
+  detailActions: {
+    actions: {
+      dataFetch: (userId, component) => alert(`${component} mounted`)
+    }
+  },
 }
-APrimary.storyName = '01.'
+APrimary.storyName = '1. With Details'

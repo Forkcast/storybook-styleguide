@@ -1,17 +1,17 @@
 import React from 'react';
 import ComponentStyle from './style';
 
-import BenefitHistory from 'BenefitHistory/component'
-import ContactHistory from 'ContactHistory/component'
-import EventLog from 'EventLog/component'
-import Feedback from 'Feedback/component'
-import Notes from 'Notes/component'
-import Orders from 'Orders/component'
-import PaymentHistory from 'PaymentHistory/component'
-import PersonalInformation from 'PersonalInformation/component'
-import QuickAccess from 'QuickAccess/component'
-import RDAssessment from 'RDAssessment/component'
-import UserLocations from 'UserLocations/component'
+import BenefitHistory from 'Page/Support/Search/SearchDetailPanel/BenefitHistory/component'
+import ContactHistory from 'Page/Support/Search/SearchDetailPanel/ContactHistory/component'
+import EventLog from 'Page/Support/Search/SearchDetailPanel/EventLog/component'
+import Feedback from 'Page/Support/Search/SearchDetailPanel/Feedback/component'
+import Notes from 'Page/Support/Search/SearchDetailPanel/Notes/component'
+import Orders from 'Page/Support/Search/SearchDetailPanel/Orders/component'
+import PaymentHistory from 'Page/Support/Search/SearchDetailPanel/PaymentHistory/component'
+import PersonalInformation from 'Page/Support/Search/SearchDetailPanel/PersonalInformation/component'
+import QuickAccess from 'Page/Support/Search/SearchDetailPanel/QuickAccess/component'
+import RDAssessment from 'Page/Support/Search/SearchDetailPanel/RDAssessment/component'
+import UserLocations from 'Page/Support/Search/SearchDetailPanel/UserLocations/component'
 
 import {
   propTypes,
@@ -23,18 +23,22 @@ const Component = ({ classes, details, actions, ...props }) => {
     <ComponentStyle
       className={classes.join(' ')}
     >
-        <QuickAccess {...details.user} actions={actions.quickAccess} />
-        <div className="two-column">
-          <Notes {...details.notes} actions={actions.notes} />
-          <EventLog {...details.events} />
-          <Orders {...details.orders} />
-          <PersonalInformation {...details.user} />
-          <ContactHistory {...details.contacts} />
-          <UserLocations {...details.user.locations} />
-          <RDAssessment {...details.rd} />                
-          <Feedback feedback={details.feedback} />        
-          <PaymentHistory {...details.payments} />
-          <BenefitHistory  {...details.benefits} />        
+        <QuickAccess {...details.user} />
+        <div className={'two-column'}>
+          <div className={'column'}>
+            <Notes {...details.notes} actions={actions.notes} />
+            <Orders {...details.orders} />
+            <ContactHistory {...details.contacts} />
+            <RDAssessment {...details.rd} />                
+            <PaymentHistory {...details.payments} />
+          </div>
+          <div className={'column'}>
+            <EventLog {...details.events} />
+            <PersonalInformation {...details.user} />
+            <UserLocations {...details.user.locations} />
+            <Feedback feedback={details.feedback} />        
+            <BenefitHistory  {...details.benefits} />  
+          </div>
         </div>
     </ComponentStyle>
   );

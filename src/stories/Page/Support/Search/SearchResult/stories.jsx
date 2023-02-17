@@ -25,4 +25,11 @@ APrimary.args = {
     {key: 'row2', columns:[{key: '68186', value:'68186'}, {key: 'Alexa', value:'Alexa'}, {key: 'Smith2', value:'Smith'}, {key: '2', value:'300-555-1234'}, {key: 'b2', value:'6/4/1992'}, {key: 'a2', value: 'View Details', class: 'action'}]}
   ]
 }
-APrimary.storyName = 'Component'
+APrimary.storyName = '1. With Records'
+
+export const BSecondary = Template.bind({})
+BSecondary.args = {
+  classes: [],
+  rows: []
+}
+BSecondary.storyName = '2. Empty'

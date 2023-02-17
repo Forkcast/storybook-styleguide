@@ -20,7 +20,13 @@ const Template = ({...args}) => <SupportPage {...args} />
 export const APrimary = Template.bind({})
 APrimary.args = {
   classes: [],
-  results: []
+  results: [],
+  searchActions: {
+    onChange: (e, setValue) => {
+      setValue(e.target.value)
+    },
+    onSubmit: () => alert('Submitted')
+  }
 }
 APrimary.storyName = '01. No Search Conducted'
 
@@ -31,7 +37,11 @@ BSecondary.args = {
     {key: 'row1', columns:[{key: '90129', value:'90129'}, {key: 'John', value:'John'}, {key: 'Smith1', value:'Smith'}, {key: '1', value:'300-555-1234'}, {key: 'b1', value:'2/9/1995'}, {key: 'a1', value: 'View Details', class:'action'}]},
     {key: 'row2', columns:[{key: '68186', value:'68186'}, {key: 'Alexa', value:'Alexa'}, {key: 'Smith2', value:'Smith'}, {key: '2', value:'300-555-1234'}, {key: 'b2', value:'6/4/1992'}, {key: 'a2', value: 'View Details', class: 'action'}]}
   ],
-  details: undefined
+  details: undefined,
+  searchActions: {
+    onChange: (e, setValue) => setValue(e.target.value),
+    onSubmit: () => alert('Submitted')
+  }
 }
 BSecondary.storyName = '02. With Search Results'
 
@@ -294,7 +304,11 @@ CTertiary.args = {
     },
   },
   detailActions: {
-    quickAccess: () => alert('quickAccessAction')
+    dataFetch: (userId, component) => false
+  },
+  searchActions: {
+    onChange: (e, setValue) => setValue(e.target.value),
+    onSubmit: () => alert('Submitted')
   }
 }
 CTertiary.storyName = '03. With Details'

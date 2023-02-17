@@ -14,6 +14,7 @@ const defaultProps = {
   classes: [],
   type: 'text',
   disabled: false,
+  defaultValue: '',
   onChange: (e, setValue) => setValue(e.target.value),
 };
   

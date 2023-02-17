@@ -2,7 +2,7 @@ import React from 'react';
 import ComponentStyle from './style';
 import Paragraph from 'Base/Paragraph/component'
 import Rule from 'Base/Rule/component'
-import Avatar from 'Composite/Avatar/component'
+import Avatar from 'Composite/SideMenu/Avatar/component'
 
 import {
   propTypes,

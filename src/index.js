@@ -1,2 +1,2 @@
-import SupportSearch from 'Page/Support/Search'
-export { SupportSearch }
+import SupportView from 'Page/Support/Search/component'
+export { SupportView }

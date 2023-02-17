@@ -4,20 +4,23 @@ import ComponentStyle from './style';
 import Header from 'Base/Header/component'
 import Panel from 'Base/Panel/component'
 import Table from 'Base/Table/component'
-
+import Loader from 'Base/Loader/component'
 import {
   propTypes,
   defaultProps
 } from './props'
 
-const Component = ({ classes, action, rows }) => {
+const Component = ({ classes, action, rows, loading }) => {
   return (
     <ComponentStyle
       className={classes.join(' ')}
     >
-      <Header>Search Result</Header>
-      <Panel>
-          <Table 
+      <Loader loading={loading}>
+  
+        <Header>Search Result</Header>
+        <Panel>
+            <Table 
+              empty={'No results matched your search pattern.'}
               headers={[{
                   "key":"User ID",
                   "value":"User ID",    
@@ -39,8 +42,9 @@ const Component = ({ classes, action, rows }) => {
               }]}
               rows={rows}
               action={action}
-          />        
-      </Panel>      
+            />        
+        </Panel>      
+      </Loader>
     </ComponentStyle>
   );
 };
