@@ -11,7 +11,6 @@ import {
 } from './props'
 
 const Component = ({ classes, action, rows, loading }) => {
-  console.log(classes.join(' '))
   return (
     <ComponentStyle
       className={classes.join(' ')}
