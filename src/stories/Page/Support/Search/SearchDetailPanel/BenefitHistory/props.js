@@ -6,6 +6,7 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
+  rows: [],
 };
   
 export {

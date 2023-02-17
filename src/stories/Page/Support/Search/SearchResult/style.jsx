@@ -5,4 +5,7 @@ export default styled.div`
         color: #00A98F;
         cursor: pointer;
     }
+    &.hide {
+        display: none !important;
+    }
 `

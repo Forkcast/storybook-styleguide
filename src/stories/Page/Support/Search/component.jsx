@@ -37,10 +37,8 @@ const Component = ({
           <Button onClick={searchActions.onSubmit}>Search</Button>
         </div>
       </Panel>      
-      <SearchResult rows={results} action={resultActions} classes={resultClasses} loading={searchLoading} />
-      {details ?
-        <SearchDetailPanel actions={detailActions} details={details} classes={detailClasses} />  
-      : ''}
+      <SearchResult className={className}  rows={results} action={resultActions} classes={resultClasses} loading={searchLoading} />
+      <SearchDetailPanel className={className} actions={detailActions} details={details} classes={detailClasses} /> 
     </ComponentStyle>
   );
 };

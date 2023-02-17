@@ -18,10 +18,10 @@ import {
   defaultProps
 } from './props'
 
-const Component = ({ classes, details, actions, ...props }) => {
+const Component = ({ classes, className, details, actions, ...props }) => {
   return (
     <ComponentStyle
-      className={classes.join(' ')}
+      className={className + ' ' + classes.join(' ')}
     >
         <QuickAccess {...details.user} />
         <div className={'two-column'}>

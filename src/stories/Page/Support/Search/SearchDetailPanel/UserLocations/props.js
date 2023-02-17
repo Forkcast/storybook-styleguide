@@ -6,6 +6,8 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
+  primary: '',
+  locations: []
 };
   
 export {

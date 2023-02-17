@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export default styled.div`
+
+    &.hide {
+        display: none !important;
+    }
+
     .two-column {
         width: 100%;
         display: flex;

@@ -6,6 +6,12 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
+  orderTotalCount: 0,
+  orders: [],
+  currentCount: 0,
+  upcomingCount: 0,
+  pastCount: 0,
+
 };
   
 export {

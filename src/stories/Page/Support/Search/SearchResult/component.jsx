@@ -10,10 +10,10 @@ import {
   defaultProps
 } from './props'
 
-const Component = ({ classes, action, rows, loading }) => {
+const Component = ({ classes,className, action, rows, loading }) => {
   return (
     <ComponentStyle
-      className={classes.join(' ')}
+      className={className + ' ' + classes.join(' ')}
     >
       <Loader loading={loading}>
   

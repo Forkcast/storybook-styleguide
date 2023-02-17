@@ -13,6 +13,11 @@ const defaultProps = {
   results: [],
   resultsClasses: [],
   detailClasses: [],
+  searchActions: () => false,
+  detailActions: {
+    dataFetch: () => false,
+    notes: () => false
+  }
 };
   
 export {

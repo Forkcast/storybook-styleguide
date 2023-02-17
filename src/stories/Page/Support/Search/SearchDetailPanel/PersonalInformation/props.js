@@ -6,6 +6,16 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
+  phone: '',
+  firstName: '',
+  lastName: '',
+  email: '',
+  status: '',
+  language: '',
+  dateOfBirth: '',  
+  locations: [],
+  zip: '',
+  eligibilities: [],
 };
   
 export {

@@ -6,6 +6,8 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
+  assessmentId: '',
+  details: '',
 };
   
 export {

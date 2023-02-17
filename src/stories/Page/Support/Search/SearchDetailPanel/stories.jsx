@@ -22,7 +22,8 @@ APrimary.args = {
   classes: [],
   detailActions: {
     actions: {
-      dataFetch: (userId, component) => alert(`${component} mounted`)
+      dataFetch: (userId, component) => alert(`${component} mounted`),
+      notes: () => false
     }
   },
 }

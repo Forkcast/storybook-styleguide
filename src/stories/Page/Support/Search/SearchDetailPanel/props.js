@@ -9,20 +9,40 @@ const defaultProps = {
   classes: [],
   details: {
     user: {
+      rows: [],
       locations: {}
     },
-    notes: {},
-    events: {},
-    orders: {},
-    personal: {},
-    contacts: {},
-    rd: {},
-    feedback: {},
-    payments: {},
-    benefits: {},
-    actions: {
-      quickAccess: {}
-    }
+    notes: {
+      rows: [],
+    },
+    events: {
+      rows: [],
+    },
+    orders: {
+      rows: [],
+    },
+    personal: {
+      rows: [],
+    },
+    contacts: {
+      rows: [],
+    },
+    rd: {
+      rows: [],
+    },
+    feedback: {
+      rows: [],
+    },
+    payments: {
+      rows: [],
+    },
+    benefits: {
+      rows: [],
+    },
+  },
+  actions: {
+    quickAccess: () => {},
+    notes:  () => {}
   }
 };
   
