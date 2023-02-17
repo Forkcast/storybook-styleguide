@@ -23,6 +23,7 @@ const Component = ({
   className,
   resultClasses,
   detailClasses,
+  searchLoading,
 }) => {
   return (    
     <ComponentStyle
@@ -36,7 +37,7 @@ const Component = ({
           <Button onClick={searchActions.onSubmit}>Search</Button>
         </div>
       </Panel>      
-      <SearchResult rows={results} action={resultActions} classes={resultClasses} />
+      <SearchResult rows={results} action={resultActions} classes={resultClasses} loading={searchLoading} />
       {details ?
         <SearchDetailPanel actions={detailActions} details={details} classes={detailClasses} />  
       : ''}
