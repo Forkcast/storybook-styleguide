@@ -39,6 +39,7 @@ BSecondary.args = {
     {key: 'row2', columns:[{key: '68186', value:'68186'}, {key: 'Alexa', value:'Alexa'}, {key: 'Smith2', value:'Smith'}, {key: '2', value:'300-555-1234'}, {key: 'b2', value:'6/4/1992'}, {key: 'a2', value: 'View Details', class: 'action'}]}
   ],
   details: undefined,
+  resultActions: (e, value) => alert(value),
   searchActions: {
     onChange: (e, setValue) => setValue(e.target.value),
     onSubmit: () => alert('Submitted')

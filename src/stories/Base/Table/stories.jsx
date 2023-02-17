@@ -16,6 +16,7 @@ APrimary.args = {
   rows: [
     {key: 'row1', columns:[{key: 'test3', value:'test3'}, {key: 'test4', value:'test4'}]},
     {key: 'row2', columns:[{key: 'test5', value:'test5'}, {key: 'test6', value:'test6'}]}
-  ]
+  ],
+  action: (e, value) => alert(value)
 }
 APrimary.storyName = '01. Primary'
