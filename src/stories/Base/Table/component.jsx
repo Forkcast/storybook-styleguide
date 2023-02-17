@@ -24,7 +24,7 @@ const Component = ({ headers, action, rows, empty, classes }) => {
             <td 
               key={column.key} 
               className={column.class ? column.class : ''}
-              onClick={(e) => action(e, column.value)}
+              onClick={(e) => action(e, column.data)}
             >
               {column.value}
             </td>  
