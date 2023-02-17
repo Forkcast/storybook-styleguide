@@ -37,7 +37,9 @@ const Component = ({
         </div>
       </Panel>      
       <SearchResult rows={results} action={resultActions} classes={resultClasses} />
-      <SearchDetailPanel actions={detailActions} details={details} classes={detailClasses} />  
+      {details ?
+        <SearchDetailPanel actions={detailActions} details={details} classes={detailClasses} />  
+      : ''}
     </ComponentStyle>
   );
 };
