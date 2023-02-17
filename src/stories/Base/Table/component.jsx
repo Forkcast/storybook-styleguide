@@ -5,7 +5,7 @@ import {
   defaultProps
 } from './props'
 
-const Component = ({ headers, rows, empty, classes }) => {
+const Component = ({ headers, action, rows, empty, classes }) => {
   return (
     <ComponentStyle
       className={classes.join(' ')}
@@ -24,7 +24,7 @@ const Component = ({ headers, rows, empty, classes }) => {
             <td 
               key={column.key} 
               className={column.class ? column.class : ''}
-              onClick={column.onClick ? column.onClick : () => false}
+              onClick={column.onClick ? (e) => column.onClick(e, column.value) : action ? (e) => action(e, column.value) : false}
             >
               {column.value}
             </td>  
