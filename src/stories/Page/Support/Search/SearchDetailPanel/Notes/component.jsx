@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ComponentStyle from './style';
 
 import Header from 'Base/Header/component'
@@ -17,6 +17,8 @@ const Component = ({ classes, rows, loading, action }) => {
   const [hideDialog, setHideDialog] = useState(true)
   const [notes, setNotes] = useState(rows)
   
+  useEffect(rows => setNotes(rows), [rows])
+
   return (
     <>
       <NoteDialog 
