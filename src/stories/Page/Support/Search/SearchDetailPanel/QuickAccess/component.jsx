@@ -31,6 +31,7 @@ const Component = ({
             <Header level={2}>{userId} - {firstName} {lastName}</Header>
             <Paragraph><strong>Eligibility:</strong> {eligibilities.join(' ,')}</Paragraph>
           </div>
+          {/*
           <Paragraph>Quick access</Paragraph>
           <div className={'quick-access-buttons'}>
             <Button onClick={(e) => buttonClick(e, 'rdAssess')} classes={['secondary']}>RD Assessment</Button>
@@ -38,7 +39,7 @@ const Component = ({
             <Button onClick={(e) => buttonClick(e, 'locations')} classes={['secondary']}>User Locations</Button>
             <Button onClick={(e) => buttonClick(e, 'feedback')} classes={['secondary']}>Feedback</Button>
             <Button onClick={(e) => buttonClick(e, 'intercom')} classes={['secondary']}>Open in Intercom</Button>
-          </div>
+          </div>*/}
         </Loader>
       </Panel>
     </ComponentStyle>
