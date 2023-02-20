@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
-import editImage from 'assets/edit.svg';
 const propTypes = {
   classes: PropTypes.arrayOf(PropTypes.string),
   name: PropTypes.string.isRequired,
-  type: PropTypes.string,
-  defaultValue: PropTypes.any,
+  options: PropTypes.arrayOf(PropTypes.object).isRequired,
+  defaultIndex: PropTypes.number,
   onChange: PropTypes.func,
   children: PropTypes.any,
   disabled: PropTypes.bool,
@@ -12,11 +11,9 @@ const propTypes = {
   
 const defaultProps = {
   classes: [],
-  type: 'text',
   disabled: false,
-  defaultValue: '',
-  editImage,
-  onChange: (e, setValue) => setValue(e.target.value),
+  defaultIndex: 0,
+  onChange: (e, setValue) => setValue(e.target.value)
 };
   
 export {

@@ -8,6 +8,13 @@ export default styled.div`
     font-size: 13.67px;
     line-height: 16.66px;
     position: relative;
+    textarea {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13.67px;
+        line-height: 16.66px;    
+    }
     &.disabled {
         &.form-style{
             &:hover {
@@ -15,7 +22,7 @@ export default styled.div`
                     display: none;
                 }
             }
-            input {
+            input, textarea {
                 background-color: white;
             }
         }      
@@ -33,7 +40,7 @@ export default styled.div`
         background-color: white;        
     }
 
-    input {
+    input, textarea {
         border: solid 1px #D2D5DB;
         border-radius: 4px;
         height: 18px;
@@ -54,7 +61,7 @@ export default styled.div`
             display: block;            
         }
 
-        input {
+        input, textarea {
             border: solid 0px;
             border-bottom: solid 1px rgba(0,0,0,0.5);
             border-radius: 0px;

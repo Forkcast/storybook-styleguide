@@ -6,48 +6,39 @@ import {
 } from './props'
 
 const Component = ({ 
-  name,
-  type, 
-  defaultValue, 
+  name, 
+  defaultIndex,
+  options, 
   onChange, 
   classes, 
   children,
-  editImage,
   disabled,
   ...props 
 }) => {
-  const [value, setValue] = useState(defaultValue)
+  const [value, setValue] = useState(options[defaultIndex].value)
   const classNames = classes.join(' ') + (disabled ? ' disabled' : '')
   return (
     <ComponentStyle className={classNames}>
       <label htmlFor={name}>
         {children}
       </label>
-      {type === "text" ?
-      <textarea 
+      <select 
         name={name}
-        type={type}
         value={value}
         onChange={(e) => onChange(e, setValue)}
         disabled={disabled}
-        {...props}  
-      />
-      :
-        <input 
-          name={name}
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e, setValue)}
-          disabled={disabled}
-          {...props}
-        />
-      }
-      {editImage ? 
-      <div className={'edit-icon'}>
-        <img src={editImage} alt="Edit" /> 
-        <span>Edit</span>
-      </div>
-    : ''}
+        {...props}
+      >
+        {options.map(
+            option =>
+              <option
+                key={option.value} 
+                value={option.value} 
+              >
+                {option.name}
+              </option>
+        )}
+      </select>
     </ComponentStyle>
   );
 };

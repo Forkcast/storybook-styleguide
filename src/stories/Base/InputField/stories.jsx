@@ -1,6 +1,5 @@
 import React from 'react';
 import InputField from 'InputField/component';
-import editImage from './assets/edit.svg';
 
 export default {
   title: 'Base Components/InputField',
@@ -29,7 +28,6 @@ export const BSecondary = Template.bind({})
 BSecondary.args = {
   classes: ['form-style'],
   children: 'Name',
-  editImage: editImage,
   name: 'input2'
 }
 BSecondary.storyName = '02. Form Style'
@@ -38,7 +36,6 @@ export const CTertiary = Template.bind({})
 CTertiary.args = {
   classes: ['form-style'],
   children: 'Name',
-  editImage: editImage,
   name: 'input3',
   disabled: true
 }

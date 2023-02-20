@@ -27,17 +27,17 @@ const Component = ({ classes, className, details, actions, ...props }) => {
         <div className={'two-column'}>
           <div className={'column'}>
             <Notes {...details.notes} actions={actions.notes} />
-            <Orders {...details.orders} />
+            {/* <Orders {...details.orders} />
             <ContactHistory {...details.contacts} />
             <RDAssessment {...details.rd} />                
-            <PaymentHistory {...details.payments} />
+            <PaymentHistory {...details.payments} /> */}
           </div>
           <div className={'column'}>
-            <EventLog {...details.events} />
+            {/*<EventLog {...details.events} />
             <PersonalInformation {...details.user} />
             <UserLocations {...details.user.locations} />
             <Feedback feedback={details.feedback} />        
-            <BenefitHistory  {...details.benefits} />  
+            <BenefitHistory  {...details.benefits} />*/}  
           </div>
         </div>
     </ComponentStyle>
