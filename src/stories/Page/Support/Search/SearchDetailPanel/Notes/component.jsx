@@ -5,6 +5,7 @@ import Header from 'Base/Header/component'
 import Panel from 'Base/Panel/component'
 import Table from 'Base/Table/component'
 import Button from 'Base/Button/component'
+import Loader from 'Base/Loader/component'
 import NoteDialog from './NoteDialog/component'
 
 import {
@@ -12,7 +13,7 @@ import {
   defaultProps
 } from './props'
 
-const Component = ({ classes, rows, action }) => {
+const Component = ({ classes, rows, loading, action }) => {
   const [hideDialog, setHideDialog] = useState(true)
   const [notes, setNotes] = useState(rows)
   
@@ -47,32 +48,34 @@ const Component = ({ classes, rows, action }) => {
       <ComponentStyle
         className={classes.join(' ')}
       >
-      <Panel>
-        <div className={'note-headers'}>
-          <Header>Notes</Header>
-          <Button onClick={e => setHideDialog(false)}>Add Note</Button>
-        </div>
-        <Table 
-          empty={'There are no notes associated with this user yet.'}
-          headers={[{
-              "key":"Note",
-              "value": "Note"
-            },{
-              "key":"Note type",
-              "value": "Note type"
-            },
-            {
-              "key":"Created by",
-              "value": "Created by"
-            },
-            {
-              "key":"Created at",
-              "value": "Created at"
-            }
-          ]}
-          rows={notes}
-        />
-      </Panel>
+        <Panel>
+          <Loader loading={loading}>
+            <div className={'note-headers'}>
+              <Header>Notes</Header>
+              <Button onClick={e => setHideDialog(false)}>Add Note</Button>
+            </div>
+            <Table 
+              empty={'There are no notes associated with this user yet.'}
+              headers={[{
+                  "key":"Note",
+                  "value": "Note"
+                },{
+                  "key":"Note type",
+                  "value": "Note type"
+                },
+                {
+                  "key":"Created by",
+                  "value": "Created by"
+                },
+                {
+                  "key":"Created at",
+                  "value": "Created at"
+                }
+              ]}
+              rows={notes}
+            />
+            </Loader>
+        </Panel>
       </ComponentStyle>
     </>
   );

@@ -10,6 +10,7 @@ const Component = ({ image, loading, className, classes, children }) => {
   return (
     <ComponentStyle
       className={'loader ' + classes.join(' ')}
+      loading={loading}
     >
      {loading ?
       <img src={image} alt="Loading..." />

@@ -47,3 +47,27 @@ BPrimary.args = {
   action: (text, type, date) => alert(`Text: ${text}, Type: ${type}, Date: ${date}`)
 }
 BPrimary.storyName = '02. One Note'
+
+export const CPrimary = Template.bind({})
+CPrimary.args = {
+  classes: [],
+  loading: true,
+  rows: [{
+    key: "row1",
+    columns: [{
+      key: "row1col1",
+      value: "Lorem ipsum is simply dummy text of the printing and typesetting industry",
+    },{
+      key: "ro1col2",
+      value: "Refund type",
+    },{
+      key: "row1col3",
+      value: "Admin",
+    },{
+      key: "ro1cnol4",
+      value: "1/13/2023",
+    }]
+  }],
+  action: (text, type, date) => alert(`Text: ${text}, Type: ${type}, Date: ${date}`)
+}
+CPrimary.storyName = '03. Loading'
