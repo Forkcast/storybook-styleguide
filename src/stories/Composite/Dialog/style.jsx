@@ -6,6 +6,12 @@ export default styled.div`
     display: none !important;
   }
 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+
   .overlay {
     background: rgba(0,0,0,0.25);
     position: absolute;
