@@ -28,7 +28,7 @@ const Component = ({
       onClose={onClose}
     >
       <InputField 
-        type="text"
+        type="textarea"
         name="note_text"
         value={noteText}
         onChange={(e) => setNoteText(e.target.value)}

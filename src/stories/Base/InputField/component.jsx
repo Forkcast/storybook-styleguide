@@ -23,7 +23,7 @@ const Component = ({
       <label htmlFor={name}>
         {children}
       </label>
-      {type === "text" ?
+      {type === "textarea" ?
       <textarea 
         name={name}
         type={type}
