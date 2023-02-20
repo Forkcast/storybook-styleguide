@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import useDeepCompareEffect from 'use-deep-compare-effect'
 import ComponentStyle from './style';
 
 import Header from 'Base/Header/component'
@@ -15,8 +16,9 @@ import {
 
 const Component = ({ classes, rows, loading, action }) => {
   const [hideDialog, setHideDialog] = useState(true)
-  const [notes, setNotes] = useState(rows.slice())
+  const [notes, setNotes] = useState(rows)
 
+  useDeepCompareEffect(()=>setNotes(rows),[rows])
   return (
     <>
       <NoteDialog 
