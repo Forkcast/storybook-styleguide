@@ -39,11 +39,26 @@ const Component = ({
         value={noteType}
         name="note_type"
         options={[{
-          "name":"Refund type",
-          "value": "Refund type",
+          "name":"Status Note",
+          "value": "Status Note",
         },{
-          "name":"Other",
-          "value": "other",
+          "name":"Issue Note",
+          "value": "Issue Note",
+        }, {
+          "name":"General Note",
+          "value": "General Note",
+        },{
+          "name":"Refund Note",
+          "value": "Refund Note",
+        },{
+          "name":"Closing Note",
+          "value": "Closing Note",
+        },{
+          "name":"Reassign disthub",
+          "value": "Reassign disthub",
+        }, {
+          "name":"Reopening Note",
+          "value": "Reopening Note",
         }]}
         onChange={(e) => setNoteType(e.target.value)}
       >
