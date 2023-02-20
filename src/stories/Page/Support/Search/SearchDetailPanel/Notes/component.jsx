@@ -15,9 +15,7 @@ import {
 
 const Component = ({ classes, rows, loading, action }) => {
   const [hideDialog, setHideDialog] = useState(true)
-  const [notes, setNotes] = useState(rows)
-  
-  useEffect(rows => setNotes(rows), [rows])
+  const [notes, setNotes] = useState(rows.slice())
 
   return (
     <>
