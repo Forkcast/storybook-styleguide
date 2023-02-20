@@ -40,7 +40,7 @@ const Component = ({
         name="note_type"
         options={[{
           "name":"Refund type",
-          "value": "refund",
+          "value": "Refund type",
         },{
           "name":"Other",
           "value": "other",
