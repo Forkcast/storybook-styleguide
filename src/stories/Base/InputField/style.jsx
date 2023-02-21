@@ -66,7 +66,7 @@ export default styled.div`
             border-bottom: solid 1px rgba(0,0,0,0.5);
             border-radius: 0px;
             padding: 0px;
-            font-size: 15.9468px;
+            font-size: 13px;
             line-height: 17px;
             color: #717171;
             &:focus  {
@@ -80,7 +80,7 @@ export default styled.div`
                 display: block;
                 position: absolute;
                 right: 50px;
-                top: 0px;
+                top: 5px;
            }
         }
 
