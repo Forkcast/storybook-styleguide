@@ -26,7 +26,7 @@ const Component = ({ classes, className, details, actions, ...props }) => {
         <QuickAccess {...details.user} />
         <div className={'two-column'}>
           <div className={'column'}>
-            <Notes {...details.notes} actions={actions.notes} />
+            <Notes {...details.notes} action={actions.notes} />
             {/* <Orders {...details.orders} />
             <ContactHistory {...details.contacts} />
             <RDAssessment {...details.rd} />                
