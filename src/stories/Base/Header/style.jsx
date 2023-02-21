@@ -11,6 +11,7 @@ const h1 = styled.h1`
   align-items: center;
   color: #000000;
   margin-top: 0px;
+  margin-bottom: 25px;
 `
 
 const h2 = styled.h2`
