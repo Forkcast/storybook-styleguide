@@ -17,11 +17,8 @@ const Component = ({ classes, rows, ...props }) => {
     >
         <Panel>
           <Header>Contact History</Header>
-          <div className="buttons">
-            <Button>Send Text</Button>
-            <Button>Call</Button>          
-          </div>
           <Table 
+            empty={"There is no contact history for this user"}
             headers={[{
               "key":"Date",
               "value":"Date",

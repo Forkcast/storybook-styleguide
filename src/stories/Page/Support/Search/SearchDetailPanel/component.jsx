@@ -27,8 +27,8 @@ const Component = ({ classes, className, details, actions, ...props }) => {
         <div className={'two-column'}>
           <div className={'column'}>
             <Notes {...details.notes} action={actions.notes} />
-            <ContactHistory {...details.contacts} />
             {/* <Orders {...details.orders} />
+            <ContactHistory {...details.contacts} />
             <RDAssessment {...details.rd} />                
             <PaymentHistory {...details.payments} /> */}
           </div>
