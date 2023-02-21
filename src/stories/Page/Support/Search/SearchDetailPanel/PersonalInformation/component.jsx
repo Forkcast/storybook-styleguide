@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ComponentStyle from './style';
 
 import Header from 'Base/Header/component'
@@ -35,6 +35,31 @@ const Component = ({
   const [locationsValue, setLocations] = useState(locations.primary)
   const [zipValue, setZip] = useState(zip)
   const [eligibilitiesValue, setEligibilities] = useState(eligibilities)
+
+  useEffect(() => {
+    setPhone(phone)
+    setFirstName(firstName)
+    setLastName(lastName)
+    setEmail(email)
+    setStatus(status)
+    setLanguage(language)
+    setDateOfBirth(dateOfBirth)
+    setLocations(locations)
+    setZip(zip)
+    setEligibilities(eligibilities)
+  }, 
+  [
+    phone, 
+    firstName, 
+    lastName, 
+    email, 
+    status,
+    language, 
+    dateOfBirth, 
+    locations, 
+    zip, 
+    eligibilities
+  ])
 
   return (
     <ComponentStyle

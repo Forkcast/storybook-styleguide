@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import useDeepCompareEffect from 'use-deep-compare-effect'
 import ComponentStyle from './style';
 
 import BenefitHistory from 'Page/Support/Search/SearchDetailPanel/BenefitHistory/component'
@@ -19,21 +20,25 @@ import {
 } from './props'
 
 const Component = ({ classes, className, details, actions, ...props }) => {
+  const [profile, setProfile] = useState(details)
+
+  useDeepCompareEffect(() => setProfile(details), [details])
+  
   return (
     <ComponentStyle
       className={className + ' ' + classes.join(' ')}
     >
-        <QuickAccess {...details.user} />
+        <QuickAccess {...profile.user} />
         <div className={'two-column'}>
           <div className={'column'}>
-            <Notes {...details.notes} action={actions.notes} />
+            <Notes {...profile.notes} action={actions.notes} />
             {/* <Orders {...details.orders} />
             <ContactHistory {...details.contacts} />
             <RDAssessment {...details.rd} />                
             <PaymentHistory {...details.payments} /> */}
           </div>
           <div className={'column'}>
-            <PersonalInformation {...details.user} action={actions.personal} />
+            <PersonalInformation {...profile.user} action={actions.personal} />
             {/*<EventLog {...details.events} />
             <UserLocations {...details.user.locations} />
             <Feedback feedback={details.feedback} />        
