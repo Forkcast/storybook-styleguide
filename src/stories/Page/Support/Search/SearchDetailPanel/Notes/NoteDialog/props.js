@@ -9,6 +9,7 @@ const propTypes = {
 const defaultProps = {
   classes: [],
   hidden: true,
+  defaultType: "Status Note"
 };
   
 export {

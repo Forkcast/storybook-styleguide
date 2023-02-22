@@ -19,6 +19,7 @@ export default styled.div`
     left: 0px;
     width: 100%;
     height: 100%;
+    z-index: 1;
   }
 
   .panel-overlay {
@@ -28,7 +29,8 @@ export default styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-
+    z-index: 1;
+    
     .title-row {
       display: flex;
       flex-direction: row;

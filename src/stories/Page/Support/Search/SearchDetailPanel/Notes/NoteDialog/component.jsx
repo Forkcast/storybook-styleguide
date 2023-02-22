@@ -15,11 +15,12 @@ const Component = ({
   onSave,
   onClose,
   hidden,
+  defaultType,
   ...props 
 }) => {
 
   const [noteText, setNoteText] = useState('')
-  const [noteType, setNoteType] = useState('refund')
+  const [noteType, setNoteType] = useState(defaultType)
   return (
     <ComponentStyle
       className={classes.join(' ')}
@@ -71,6 +72,8 @@ const Component = ({
             e => { 
               const date = new Date().toLocaleDateString()
               onSave(e, noteText, noteType, date)
+              setNoteText('')
+              setNoteType(defaultType)
             }
           }
         >Save</Button>
