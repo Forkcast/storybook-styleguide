@@ -71,10 +71,10 @@ const Component = ({
         <InputField classes={['form-style']} onChange={(e)=>setFirstName(e.target.value)} value={firstNameValue} name="firstName">First Name</InputField>
         <InputField classes={['form-style']} onChange={(e)=>setLastName(e.target.value)} value={lastNameValue} name="lastName">Last Name</InputField>
         <InputField classes={['form-style']} onChange={(e)=>setEmail(e.target.value)} value={emailValue} name="email">Email</InputField>
-        <InputField classes={['form-style']} onChange={(e)=>setStatus(e.target.value)} value={statusValue} name="status">Status</InputField>
+        {/*<InputField classes={['form-style']} onChange={(e)=>setStatus(e.target.value)} value={statusValue} name="status">Status</InputField>*/}
         <InputField classes={['form-style']} onChange={(e)=>setLanguage(e.target.value)} value={languageValue} name="language">Preferred Language</InputField>
         <InputField classes={['form-style']} onChange={(e)=>setDateOfBirth(e.target.value)} value={dateOfBirthValue} name="dateOfBirth">Date of Birth</InputField>
-        <InputField classes={['form-style']} onChange={(e)=>setLocations(e.target.value)} value={locationsValue} name="primaryLocation">Primary Location</InputField>
+        {/*<InputField classes={['form-style']} onChange={(e)=>setLocations(e.target.value)} value={locationsValue} name="primaryLocation">Primary Location</InputField> */}
         <InputField classes={['form-style']} onChange={(e)=>setZip(e.target.value)} value={zipValue} name="zipCode">ZIP Code</InputField>
         {/*<InputField classes={['form-style']} value={Value} name="eligibility">Eligibility</InputField>*/}
         <Button classes={['secondary']} onClick={(e) => action(
