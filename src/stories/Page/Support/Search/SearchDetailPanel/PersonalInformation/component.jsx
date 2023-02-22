@@ -44,7 +44,7 @@ const Component = ({
     setStatus(status)
     setLanguage(language)
     setDateOfBirth(dateOfBirth)
-    setLocations(locations)
+    setLocations(locations.primary)
     setZip(zip)
     setEligibilities(eligibilities)
   }, 
