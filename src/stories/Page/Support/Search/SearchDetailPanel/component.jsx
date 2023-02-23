@@ -32,8 +32,8 @@ const Component = ({ classes, className, details, actions, ...props }) => {
         <div className={'two-column'}>
           <div className={'column'}>
             <Notes {...profile.notes} action={actions.notes} />
-            {/* <Orders {...details.orders} />
             <ContactHistory {...details.contacts} />
+            {/* <Orders {...details.orders} />
             <RDAssessment {...details.rd} />                
             <PaymentHistory {...details.payments} /> */}
           </div>

@@ -34,9 +34,6 @@ const Component = ({ classes, rows, ...props }) => {
             },{
               "key":"Receiver",
               "value":"Receiver",
-            },{
-              "key":"Status",
-              "value":"Status",
             }]}
             rows={rows}
           />
