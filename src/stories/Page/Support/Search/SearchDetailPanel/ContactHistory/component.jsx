@@ -1,7 +1,7 @@
 import React from 'react';
 import ComponentStyle from './style';
-
-import Header from 'Base/Header/component'
+import useDeepCompareEffect from 'use-deep-compare-effect'
+import Header from 'Base/Header/component'(
 import Panel from 'Base/Panel/component'
 import Button from 'Base/Button/component'
 import Table from 'Base/Table/component'
@@ -11,6 +11,8 @@ import {
 } from './props'
 
 const Component = ({ classes, rows, ...props }) => {
+  const [contacts, setContacts] = useState(rows)
+  useDeepCompareEffect( () => setContacts(rows), [rows])
   return (
     <ComponentStyle
       className={classes.join(' ')}
@@ -35,7 +37,7 @@ const Component = ({ classes, rows, ...props }) => {
               "key":"Receiver",
               "value":"Receiver",
             }]}
-            rows={rows}
+            rows={contacts}
           />
         </Panel>
     </ComponentStyle>
