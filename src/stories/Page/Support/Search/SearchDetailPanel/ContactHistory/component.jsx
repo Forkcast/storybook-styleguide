@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useState } from 'react';
 import ComponentStyle from './style';
 import useDeepCompareEffect from 'use-deep-compare-effect'
 import Header from 'Base/Header/component'
