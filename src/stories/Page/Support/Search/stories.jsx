@@ -151,9 +151,6 @@ CTertiary.args = {
         },{
           key: "contacts_ro1col5",
           value: "Ryan Ally"
-        },{
-          key: "contacts_ro1col6",
-          value: "Reorder box"
         }]
       },{
         key: "contacts_row2",
@@ -172,9 +169,6 @@ CTertiary.args = {
         },{
           key: "contacts_ro2col5",
           value: "Nick Joe"
-        },{
-          key: "contacts_ro2col6",
-          value: "Resolved"
         }]
       }]
     },
