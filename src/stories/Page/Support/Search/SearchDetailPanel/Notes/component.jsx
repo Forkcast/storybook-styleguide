@@ -40,10 +40,12 @@ const Component = ({ classes, rows, loading, action }) => {
               "value": date
             }]
           }
-          notes.push(note)
-          setNotes(notes)
-          setHideDialog(true)
-          action(text, type, date)
+          if(text.trim()){
+            notes.push(note)
+            setNotes(notes)
+            setHideDialog(true)
+            action(text, type, date)
+          }
         }}
         onClose={e=>setHideDialog(true)}
       />
